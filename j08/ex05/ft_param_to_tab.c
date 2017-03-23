@@ -45,6 +45,8 @@ struct	s_stock_par *ft_param_to_tab(int ac, char **av)
 
 	temp = 0;
 	params = (struct s_stock_par *)malloc(sizeof(struct s_stock_par) * (ac + 1));
+	if (!params)
+		return (0);
 	while (temp < ac)
 	{
 		params[temp].size_param = ft_strlen(av[temp]);
